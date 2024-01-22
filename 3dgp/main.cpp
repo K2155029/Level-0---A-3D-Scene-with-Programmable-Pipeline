@@ -14,6 +14,9 @@ using namespace std;
 using namespace _3dgl;
 using namespace glm;
 
+// GLSL Program
+C3dglProgram program;
+
 // 3D models
 C3dglModel camera;
 
