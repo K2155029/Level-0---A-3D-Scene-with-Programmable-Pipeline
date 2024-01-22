@@ -29,14 +29,16 @@ float accel = 4.f;		// camera acceleration
 vec3 _acc(0), _vel(0);	// camera acceleration and velocity vectors
 float _fov = 60.f;		// field of view (zoom)
 
+
 bool init()
 {
+
 	// rendering states
 	glEnable(GL_DEPTH_TEST);	// depth test is necessary for most 3D scenes
 	glEnable(GL_NORMALIZE);		// normalization is needed by AssImp library models
 	glShadeModel(GL_SMOOTH);	// smooth shading mode is the default one; try GL_FLAT here!
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);	// this is the default one; try GL_LINE!
-
+	
 	// setup lighting
 	glEnable(GL_LIGHTING);									// --- DEPRECATED
 	glEnable(GL_LIGHT0);									// --- DEPRECATED
@@ -51,8 +53,9 @@ bool init()
 		vec3(0.0, 5.0, 0.0),
 		vec3(0.0, 1.0, 0.0));
 
+
 	// setup the screen background colour
-	glClearColor(0.18f, 0.25f, 0.22f, 1.0f);   // deep grey background
+	glClearColor(0.18f, 0.25f, 0.22f, 1.0f); // deep grey background
 
 	cout << endl;
 	cout << "Use:" << endl;
